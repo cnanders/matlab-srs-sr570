@@ -3,5 +3,5 @@ MATLAB Serial Communication With Stanford Research Systems SR570 Current Preampl
 
 
 ## Dependencies
-- (Matlab Package Manager)[https://github.com/ryanmiyakawa/mpm]
-- (matlab-ascii-comm)[https://github.com/cnanders/matlab-ascii-comm]
+- [mpm](https://github.com/ryanmiyakawa/mpm)
+- [matlab-ascii-comm](https://github.com/cnanders/matlab-ascii-comm)
