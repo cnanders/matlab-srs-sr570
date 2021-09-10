@@ -10,7 +10,8 @@ classdef SR570Virtual < srs.AbstractSR570 & AsciiComm
     
     properties
         
-        dLevel = 0
+        dSensitivity = 0
+        lHasSet = false
     end
     
     methods
@@ -22,8 +23,15 @@ classdef SR570Virtual < srs.AbstractSR570 & AsciiComm
         
         % Sets the sensitivity of the amplifier See constant props SETTING_*:
         function setSensitivity(this, dVal)
-            this.dLevel = dVal;
+            this.dSensitivity = dVal;
+            this.lHasSet = true;
         end 
+        
+        function [dVal, lSuccess] = getSensitivity(this)
+            dVal = this.getAmpsPerVoltFromSetting(this.dSensitivity);
+            lSuccess = this.lHasSet; % only return success if we have called set once since the hardware has no read capability
+            
+        end
                 
     end
     
