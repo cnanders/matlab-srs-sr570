@@ -115,6 +115,8 @@ classdef AbstractSR570 < handle
         
         case this.SENSITIVITY_1_MA_PER_VOLT
             dVal = 1e-3;
+                otherwise
+                    dVal = 0;
             end
         end
     end
