@@ -14,7 +14,7 @@ classdef SR570 < srs.AbstractSR570 & AsciiComm
     
     properties (Access = private)
         
-        dSensitivity = 0;
+        dSensitivity = 5; % this is not a value, it is one of the 30 allowed values on the hardware
         lHasSet = false;
         
     end
